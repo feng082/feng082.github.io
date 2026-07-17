@@ -1,0 +1,32 @@
+title: 我的技术与生活笔记
+subtitle: 记录思考，分享生活
+description: 一个记录编程学习、阅读心得和生活随想的个人博客。
+author: feng082
+language: zh-CN
+timezone: Asia/Shanghai
+url: https://feng082.github.io
+root: /
+permalink: :year/:month/:day/:title/
+new_post_name: :year-:month-:day-:title.md
+theme: qing-next
+highlight:
+  enable: false
+markdown:
+  render: true
+  anchors:
+    level: 2
+    collision_suffix: true
+  typographer: true
+  quotes: '“”‘’'
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -date
+category_generator:
+  per_page: 20
+tag_generator:
+  per_page: 20
+skip_render:
+  - admin/**
