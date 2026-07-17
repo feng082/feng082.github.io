@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="我的个人博客，记录思考，分享生活。" />
+    <title>我的小栈</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="headband"></div>
+
+    <header class="site-header">
+      <div class="brand-row">
+        <button class="icon-button menu-toggle" type="button" aria-label="打开导航栏" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="brand" href="#home" aria-label="回到首页">
+          <i></i><h1>我的小栈</h1><i></i>
+        </a>
+        <button class="icon-button search-open" type="button" aria-label="打开搜索">
+          <span class="fa-solid fa-magnifying-glass"></span>
+        </button>
+      </div>
+      <p class="subtitle">记录思考，分享生活</p>
+      <nav class="site-nav" aria-label="主导航">
+        <a class="active" href="#home"><span class="fa-solid fa-house"></span>首页</a>
+        <a href="#tags"><span class="fa-solid fa-tags"></span>标签<em>8</em></a>
+        <a href="#archives"><span class="fa-solid fa-box-archive"></span>归档<em>5</em></a>
+        <a href="#about"><span class="fa-solid fa-user"></span>关于</a>
+        <button class="nav-search search-open" type="button"><span class="fa-solid fa-magnifying-glass"></span>搜索</button>
+      </nav>
+    </header>
+
+    <div class="page-shell">
+      <aside class="sidebar" aria-label="站点概览">
+        <div class="sidebar-inner">
+          <div class="avatar" aria-hidden="true">我</div>
+          <h2>你的名字</h2>
+          <p>这里写一句关于你的介绍，分享技术、阅读和生活里的小发现。</p>
+          <div class="stats">
+            <a href="#archives"><strong>5</strong><span>日志</span></a>
+            <a href="#tags"><strong>8</strong><span>标签</span></a>
+            <a href="#about"><strong>1</strong><span>关于</span></a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><span class="fa-brands fa-github"></span></a>
+            <a href="mailto:you@example.com" aria-label="邮箱"><span class="fa-solid fa-envelope"></span></a>
+          </div>
+          <p class="license">本站内容采用<br /><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0</a> 许可。</p>
+        </div>
+      </aside>
+
+      <main id="home" class="main-content">
+        <section class="intro-card">
+          <p class="eyebrow">WELCOME TO MY NOTEBOOK</p>
+          <h2>把想法写下来，<br /><span>让时间留下痕迹。</span></h2>
+          <p>这是一个可以长期维护的个人博客模板。你可以在这里记录技术笔记、阅读心得和生活随想。</p>
+        </section>
+
+        <section class="posts" aria-label="文章列表">
+          <article id="post-1" class="post-card" data-search="开始搭建个人博客 技术 建站">
+            <h2><a href="#post-1">开始搭建一个属于自己的个人博客</a></h2>
+            <div class="post-meta"><span><i class="fa-regular fa-calendar"></i>发表于 2026-07-17</span><span><i class="fa-regular fa-clock"></i>阅读 5 分钟</span></div>
+            <p>一个博客不只是展示页面，更是把零散的想法整理成体系的地方。从选型、部署到持续写作，这篇文章记录我的第一步。</p>
+            <div class="post-tags"><a href="#tags">建站</a><a href="#tags">随笔</a></div>
+            <a class="read-more" href="#post-1">阅读全文 <span>→</span></a>
+          </article>
+
+          <article id="post-2" class="post-card" data-search="读书笔记 人类简史 阅读 思考">
+            <h2><a href="#post-2">读书笔记：我们如何成为今天的自己</a></h2>
+            <div class="post-meta"><span><i class="fa-regular fa-calendar"></i>发表于 2026-07-12</span><span><i class="fa-regular fa-clock"></i>阅读 8 分钟</span></div>
+            <p>读完一本书之后，真正重要的不是记住多少知识，而是它有没有改变你看待世界的方式。记录几条让我停下来思考的观点。</p>
+            <div class="post-tags"><a href="#tags">阅读</a><a href="#tags">思考</a></div>
+            <a class="read-more" href="#post-2">阅读全文 <span>→</span></a>
+          </article>
+
+          <article id="post-3" class="post-card" data-search="前端学习 JavaScript CSS 编程">
+            <h2><a href="#post-3">前端学习中的几个小发现</a></h2>
+            <div class="post-meta"><span><i class="fa-regular fa-calendar"></i>发表于 2026-07-05</span><span><i class="fa-regular fa-clock"></i>阅读 4 分钟</span></div>
+            <p>把复杂的问题拆小，把每一次踩坑都留下记录。这里整理几个在实际项目中让我印象深刻的前端细节。</p>
+            <div class="post-tags"><a href="#tags">JavaScript</a><a href="#tags">前端</a></div>
+            <a class="read-more" href="#post-3">阅读全文 <span>→</span></a>
+          </article>
+        </section>
+
+        <section id="tags" class="page-section">
+          <p class="eyebrow">TAGS</p><h2>标签</h2>
+          <div class="tag-cloud"><a href="#home">前端 <b>3</b></a><a href="#home">阅读 <b>2</b></a><a href="#home">思考 <b>2</b></a><a href="#home">建站 <b>1</b></a><a href="#home">随笔 <b>1</b></a><a href="#home">JavaScript <b>1</b></a></div>
+        </section>
+
+        <section id="archives" class="page-section">
+          <p class="eyebrow">ARCHIVES</p><h2>归档</h2>
+          <div class="archive-list"><div><strong>2026</strong><a href="#home">7 月 · 开始搭建一个属于自己的个人博客</a><a href="#home">7 月 · 读书笔记：我们如何成为今天的自己</a><a href="#home">7 月 · 前端学习中的几个小发现</a></div><div><strong>2025</strong><a href="#home">12 月 · 年末总结：慢慢变好</a><a href="#home">10 月 · 一次周末散步</a></div></div>
+        </section>
+
+        <section id="about" class="page-section about-section">
+          <p class="eyebrow">ABOUT ME</p><h2>关于</h2>
+          <p>你好，我是你的名字。这里是我的个人博客，主要记录编程学习、阅读心得和生活随想。</p>
+          <p>如果你也喜欢把问题想清楚、把事情做扎实，欢迎通过 GitHub 或邮件和我交流。</p>
+        </section>
+
+        <footer class="site-footer">© 2026 你的名字 · Powered by GitHub Pages</footer>
+      </main>
+    </div>
+
+    <div class="search-overlay" hidden>
+      <div class="search-dialog" role="dialog" aria-modal="true" aria-label="搜索文章">
+        <div class="search-head"><span class="fa-solid fa-magnifying-glass"></span><input id="search-input" type="search" placeholder="搜索文章标题或内容…" autocomplete="off" /><button class="search-close" type="button" aria-label="关闭搜索">×</button></div>
+        <div id="search-results" class="search-results"><p>输入关键词开始搜索</p></div>
+      </div>
+    </div>
+    <button class="back-top" type="button" aria-label="回到顶部">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
