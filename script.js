@@ -1,6 +1,6 @@
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.main-nav');
-const siteContent = window.MapleSiteConfig?.load?.() || {};
+const siteContent = window.MapleSiteConfig?.load?.();
 
 const setButtonLabel = (button, label, arrow) => {
   if (!button) return;
@@ -52,7 +52,7 @@ const applySiteContent = (content) => {
   });
 };
 
-applySiteContent(siteContent);
+if (siteContent) applySiteContent(siteContent);
 
 // Keep third-party editing/sync overlays out of the exported local page.
 const removeInjectedOverlays = () => {

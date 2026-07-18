@@ -20,7 +20,7 @@ const showStatus = (message, isError = false) => {
   }, 3200);
 };
 
-fillForm(window.MapleSiteConfig.load());
+fillForm(window.MapleSiteConfig.load() || window.MapleSiteConfig.DEFAULTS);
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();

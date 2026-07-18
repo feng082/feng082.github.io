@@ -1,9 +1,10 @@
 (() => {
   const STORAGE_KEY = 'maple082-site-content-v2';
+  const LEGACY_INTRO = '在国企设计院做通信工程，用严谨的脑子画图纸、算链路、跑现场，把每一处通信基础设施做得稳稳当当。';
   const DEFAULTS = Object.freeze({
     name: '枫哥说AI',
     role: 'AI赋能自媒体',
-    intro: '在国企设计院做通信工程，用严谨的脑子画图纸、算链路、跑现场，把每一处通信基础设施做得稳稳当当。',
+    intro: 'btc链上分析｜AI+自媒体｜分享工具、趋势与实战方法｜抖音/公众号持续更新',
     availability: '现可接洽',
     heroCta: '直接联系我',
     contactCta: '一起联系我',
@@ -20,10 +21,14 @@
   const normalize = (value) => ({ ...DEFAULTS, ...(value && typeof value === 'object' ? value : {}) });
 
   const load = () => {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (!stored) return null;
     try {
-      return normalize(JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '{}'));
+      const next = normalize(JSON.parse(stored));
+      if (next.intro === LEGACY_INTRO) next.intro = DEFAULTS.intro;
+      return next;
     } catch {
-      return normalize();
+      return null;
     }
   };
 
