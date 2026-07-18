@@ -1,1 +1,0 @@
-<section class="page-section"><p class="eyebrow">TAGS</p><h1>标签</h1><div class="tag-cloud"><% site.tags.sort('length', -1).each(function(tag){ %><a href="<%= url_for(tag.path) %>"><%= tag.name %> <b><%= tag.length %></b></a><% }) %></div></section>
