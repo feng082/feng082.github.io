@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>maple082 / 首页编辑</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">MAPLE082 / ADMIN</p>
+          <h1>首页编辑器</h1>
+          <p class="intro">修改下面的信息，保存后返回首页即可看到效果。</p>
+        </div>
+        <a class="back-link" href="../">查看首页 ↗</a>
+      </header>
+
+      <div class="notice">
+        当前版本保存到本浏览器的本地存储中。GitHub Pages 没有数据库，所以其他设备和访客不会自动同步这些修改。
+      </div>
+
+      <form id="content-form" class="editor-form">
+        <section class="form-card">
+          <p class="section-label">01 / 首页主视觉</p>
+          <div class="form-grid">
+            <label>姓名<input name="name" required /></label>
+            <label>职业 / 副标题<input name="role" required /></label>
+            <label class="full-width">首页介绍<textarea name="intro" rows="4" required></textarea></label>
+            <label>顶部状态文案<input name="availability" required /></label>
+            <label>首页联系按钮<input name="heroCta" required /></label>
+            <label>底部联系按钮<input name="contactCta" required /></label>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <p class="section-label">02 / 联系信息</p>
+          <div class="form-grid">
+            <label>邮箱<input name="email" type="email" required /></label>
+            <label>单位<input name="unit" required /></label>
+            <label>岗位<input name="position" required /></label>
+            <label>时区<input name="timezone" required /></label>
+            <label>语言<input name="languages" required /></label>
+            <label>联系账号<input name="contactHandle" required /></label>
+            <label>履历卡片<input name="resumeText" required /></label>
+            <label>项目案例卡片<input name="projectText" required /></label>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button class="save-button" type="submit">保存并更新首页 ↗</button>
+          <button class="reset-button" type="button" id="reset-button">恢复默认</button>
+          <span id="save-status" role="status"></span>
+        </div>
+      </form>
+    </main>
+    <script src="../site-config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

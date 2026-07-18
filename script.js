@@ -1,5 +1,56 @@
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.main-nav');
+const siteContent = window.MapleSiteConfig?.load?.() || {};
+
+const setButtonLabel = (button, label, arrow) => {
+  if (!button) return;
+  const arrowNode = document.createElement('span');
+  arrowNode.textContent = arrow;
+  button.replaceChildren(document.createTextNode(`${label} `), arrowNode);
+};
+
+const applySiteContent = (content) => {
+  const wordmark = document.querySelector('.wordmark strong');
+  const brandDot = document.querySelector('.brand-dot');
+  const heroTitle = document.querySelector('.hero h1');
+  const heroIntro = document.querySelector('.hero-intro');
+  const portrait = document.querySelector('.portrait-frame img');
+  const navCta = document.querySelector('.nav-cta');
+  const heroCta = document.querySelector('.button-yellow');
+  const contactCta = document.querySelector('.contact-hero-button');
+
+  if (wordmark) wordmark.textContent = content.name;
+  if (brandDot) brandDot.textContent = content.name.trim().charAt(0) || '周';
+  if (heroTitle) {
+    const role = document.createElement('span');
+    role.textContent = `·${content.role}`;
+    heroTitle.replaceChildren(document.createTextNode(content.name), document.createElement('br'), role);
+  }
+  if (heroIntro) heroIntro.textContent = content.intro;
+  if (portrait) portrait.alt = `${content.name}个人头像`;
+  if (navCta) {
+    const dot = navCta.querySelector('i') || document.createElement('i');
+    navCta.replaceChildren(dot, document.createTextNode(content.availability));
+  }
+  setButtonLabel(heroCta, content.heroCta, '↗');
+  const contactCopy = contactCta?.querySelector('.button-copy');
+  if (contactCopy) contactCopy.textContent = content.contactCta;
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.href = `mailto:${content.email}`;
+  });
+
+  const contactValues = document.querySelectorAll('.contact-info strong');
+  [content.unit, content.position, content.timezone, content.languages].forEach((value, index) => {
+    if (contactValues[index]) contactValues[index].textContent = value;
+  });
+  const cardValues = document.querySelectorAll('.contact-card strong');
+  [content.contactHandle, content.resumeText, content.projectText, content.contactHandle].forEach((value, index) => {
+    if (cardValues[index]) cardValues[index].textContent = value;
+  });
+};
+
+applySiteContent(siteContent);
 
 // Keep third-party editing/sync overlays out of the exported local page.
 const removeInjectedOverlays = () => {
