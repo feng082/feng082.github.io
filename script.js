@@ -86,7 +86,7 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
-const revealItems = document.querySelectorAll('.story-card, .service-card, .contact-info, .contact-card');
+const revealItems = document.querySelectorAll('.service-card, .contact-info, .contact-card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
