@@ -11,6 +11,7 @@ const setButtonLabel = (button, label, arrow) => {
 
 const applySiteContent = (content) => {
   const wordmark = document.querySelector('.wordmark strong');
+  const wordmarkSubtitle = document.querySelector('.wordmark-subtitle');
   const brandDot = document.querySelector('.brand-dot');
   const heroTitle = document.querySelector('.hero h1');
   const heroIntro = document.querySelector('.hero-intro');
@@ -20,6 +21,7 @@ const applySiteContent = (content) => {
   const contactCta = document.querySelector('.contact-hero-button');
 
   if (wordmark) wordmark.textContent = content.name;
+  if (wordmarkSubtitle) wordmarkSubtitle.textContent = content.role;
   if (brandDot) brandDot.textContent = content.name.trim().charAt(0) || '周';
   if (heroTitle) {
     const role = document.createElement('span');

@@ -1,8 +1,8 @@
 (() => {
-  const STORAGE_KEY = 'maple082-site-content-v1';
+  const STORAGE_KEY = 'maple082-site-content-v2';
   const DEFAULTS = Object.freeze({
-    name: '周丹枫',
-    role: '通信工程师',
+    name: '枫哥说AI',
+    role: 'AI赋能自媒体',
     intro: '在国企设计院做通信工程，用严谨的脑子画图纸、算链路、跑现场，把每一处通信基础设施做得稳稳当当。',
     availability: '现可接洽',
     heroCta: '直接联系我',
