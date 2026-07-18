@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = 'maple082-site-content-v2';
+  const STORAGE_KEY = 'maple082-site-content-v3';
   const LEGACY_INTRO = '在国企设计院做通信工程，用严谨的脑子画图纸、算链路、跑现场，把每一处通信基础设施做得稳稳当当。';
   const DEFAULTS = Object.freeze({
     name: '枫哥说AI',
@@ -8,14 +8,11 @@
     availability: '现可接洽',
     heroCta: '直接联系我',
     contactCta: '一起联系我',
-    email: 'hello@maple082.com',
-    unit: '国企设计院',
-    position: '通信工程师',
-    timezone: 'GMT+8',
-    languages: '中 · EN',
-    contactHandle: 'maple082 ↗',
-    resumeText: 'PDF · 2.4MB ↗',
-    projectText: '通信工程实践 ↗'
+    email: 'zhoudf711@gmail.com',
+    skillText: 'AI赋能',
+    projectText: 'codex零基础教程',
+    wechatText: 'maple082',
+    emailLabel: 'zhoudf711'
   });
 
   const normalize = (value) => ({ ...DEFAULTS, ...(value && typeof value === 'object' ? value : {}) });

@@ -42,12 +42,8 @@ const applySiteContent = (content) => {
     link.href = `mailto:${content.email}`;
   });
 
-  const contactValues = document.querySelectorAll('.contact-info strong');
-  [content.unit, content.position, content.timezone, content.languages].forEach((value, index) => {
-    if (contactValues[index]) contactValues[index].textContent = value;
-  });
   const cardValues = document.querySelectorAll('.contact-card strong');
-  [content.contactHandle, content.resumeText, content.projectText, content.contactHandle].forEach((value, index) => {
+  [content.skillText, content.projectText, content.wechatText, content.emailLabel].forEach((value, index) => {
     if (cardValues[index]) cardValues[index].textContent = value;
   });
 };
@@ -88,7 +84,7 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
-const revealItems = document.querySelectorAll('.service-card, .contact-info, .contact-card');
+const revealItems = document.querySelectorAll('.service-card, .contact-card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
